@@ -1,0 +1,53 @@
+body {
+  margin: none;
+  padding: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  margin: 0 auto;
+  min-width: min(500px, 90vw);
+  padding: 1rem;
+  text-align: left;
+}
+
+section {
+  display: grid;
+  border-bottom: 1px solid lightblue;
+}
+
+label {
+  font-weight: 700;
+  color: lightblue;
+}
+
+.text-field {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  margin-bottom: 1rem;
+}
+
+.edit-save-btn,
+.add-btn {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.school {
+  margin-bottom: 1rem;
+  display: grid;
+}
+
+.school.edit {
+  grid-template-columns: 160px 1fr 5px;
+}
+
+.school.display {
+  grid-template-columns: 160px 1fr;
+}
+
+.from-to input {
+  max-width: 60px;
+}
