@@ -25,7 +25,7 @@ label {
 .text-field {
   width: 100%;
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 30% 1fr;
   margin-bottom: 1rem;
 }
 
@@ -35,19 +35,47 @@ label {
   margin-bottom: 1rem;
 }
 
+.education-title.edit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .school {
   margin-bottom: 1rem;
   display: grid;
 }
 
 .school.edit {
-  grid-template-columns: 160px 1fr 5px;
+  grid-template-columns: 30% 1fr max-content;
+  max-width: 100%;
+  gap: 0.4rem;
+}
+
+.school.edit button {
+  align-self: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  font-size: 0.7rem;
 }
 
 .school.display {
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 30% 1fr;
+}
+
+.from-to.edit {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr max-content;
 }
 
 .from-to input {
-  max-width: 60px;
+  min-width: 0;
 }
+
+/* .from-to input {
+  max-width: 60px;
+  margin: 0;
+} */

@@ -26,7 +26,7 @@ function School({ editMode, deleteMethod }) {
     <>
       {editMode ? (
         <div className="school edit">
-          <div className="from-to">
+          <div className="from-to edit">
             <input
               value={fromYear}
               placeholder="Start (Year)"
@@ -70,7 +70,8 @@ function EducationSection() {
   }
 
   function handleAddSchool() {
-    setSchoolIds(schoolIds.concat(() => crypto.randomUUID()));
+    let newId = crypto.randomUUID();
+    setSchoolIds(schoolIds.concat(newId));
   }
 
   function handleDeleteSchool(deleteId) {
@@ -79,11 +80,15 @@ function EducationSection() {
 
   return (
     <section id="education-info">
-      <h2>Education</h2>
-      {editMode && (
-        <button className="add-btn" onClick={handleAddSchool}>
-          Add School
-        </button>
+      {editMode ? (
+        <div className="education-title edit">
+          <h2>Education</h2>
+          <button className="add-btn" onClick={handleAddSchool}>
+            Add School
+          </button>
+        </div>
+      ) : (
+        <h2>Education</h2>
       )}
       {schoolIds.map((id) => (
         <School
