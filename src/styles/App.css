@@ -42,18 +42,18 @@ label {
   align-items: baseline;
 }
 
-.school {
+.timeframe-text-field {
   margin-bottom: 1rem;
   display: grid;
 }
 
-.school.edit {
+.timeframe-text-field.edit {
   grid-template-columns: 30% 1fr max-content;
   max-width: 100%;
   gap: 0.4rem;
 }
 
-.school.edit button {
+.timeframe-text-field.edit button {
   align-self: center;
   border-radius: 50%;
   width: 20px;
@@ -62,16 +62,16 @@ label {
   font-size: 0.7rem;
 }
 
-.school.display {
+.timeframe-text-field.display {
   grid-template-columns: 30% 1fr;
 }
 
-.from-to.edit {
+.edit .from-to {
   display: grid;
   grid-template-columns: 1fr max-content 1fr max-content;
 }
 
-.from-to input {
+.edit .from-to input {
   min-width: 0;
 }
 
