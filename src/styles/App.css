@@ -23,47 +23,49 @@ label {
 }
 
 .text-field {
-  width: 100%;
   display: grid;
   grid-template-columns: 30% 1fr;
+  gap: 0.4rem;
   margin-bottom: 1rem;
 }
 
 .edit-save-btn,
 .add-btn {
-  width: 100%;
   margin-bottom: 1rem;
 }
 
-.education-title.edit {
+.experience .title.edit {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   align-items: baseline;
 }
 
-.timeframe-text-field {
+.experience.summary {
   margin-bottom: 1rem;
   display: grid;
-}
-
-.timeframe-text-field.edit {
-  grid-template-columns: 30% 1fr max-content;
-  max-width: 100%;
   gap: 0.4rem;
 }
 
-.timeframe-text-field.edit button {
+.experience.summary.edit {
+  grid-template-columns: 30% 1fr max-content;
+}
+
+.experience.summary.edit button {
   align-self: center;
+  justify-self: center;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   padding: 0;
+  line-height: 1;
   font-size: 0.7rem;
 }
 
-.timeframe-text-field.display {
+.experience.summary.display {
   grid-template-columns: 30% 1fr;
+  color: lightblue;
+  font-weight: 700;
 }
 
 .edit .from-to {
@@ -73,6 +75,20 @@ label {
 
 .edit .from-to input {
   min-width: 0;
+  min-height: 0;
+  padding: 0;
+}
+
+.experience.work-details .display {
+  font-weight: 300;
+}
+
+.experience.work-details .text-field {
+  margin-bottom: 0.5rem;
+}
+
+.experience.work-details .text-field:last-child {
+  margin-bottom: 1.5rem;
 }
 
 /* .from-to input {
